@@ -13,6 +13,7 @@ The config file should contain set of tasks, as the example below:
 > \* 19 /bin/run_me_sixty_times
 
 The first field represents minutes, the second one is hours.
+For both cases \* means that it should run for all values of that field.
 
 
 
