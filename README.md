@@ -2,6 +2,8 @@
 
 You can run the script as follows: ./cron_scheduler.py HH:MM < your_config_file
 
+Note that for Windows OS you should \.\ in cmd. 
+
 The config file should contain set of tasks, as the example below:
 
 > 30 1 /bin/run_me_daily
