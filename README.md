@@ -17,6 +17,13 @@ The config file should contain set of tasks, as the example below:
 The first field represents minutes, the second one is hours.
 For both cases \* means that it should run for all values of that field.
 
+**Linux:**
+![Image of Spreadsheet](https://github.com/georgi-i/cron_scheduler/blob/main/samples/linux_sample.png)
+
+**Windows:**
+![Image of Spreadsheet](https://github.com/georgi-i/cron_scheduler/blob/main/samples/windows_sample.png)
+
+
 
 
 
