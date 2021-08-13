@@ -1,13 +1,20 @@
 #!/usr/bin/python
 
 import sys
+from re import match
 
 current_time = sys.argv[1] 
 
+pattern = r'^([0-5][0-9]{0,1}|\*) (1[0-9]|2[0-4]|[1-9]|\*){0,1} \/bin\/.+$'
+
 for l in sys.stdin:
+    valid = match(pattern, l)
+    if not valid:
+        print(f'Error: Wrong config format for {l.rstrip()}')
+        continue
+
     data = l.split()
     mm, hh, task = data[0], data[1], data[2]
-
     hh_stdin, mm_stdin = (int(n) for n in current_time.split(':'))
     if mm == '*' and hh == '*':
         print(f'{current_time} today - {task}')
@@ -36,4 +43,3 @@ for l in sys.stdin:
             print(f'{int(hh_stdin) + 1}:{mm} today - {task}')
         else:
             print(f'{hh_stdin}:{mm} today - {task}')
-
